@@ -19,9 +19,9 @@ team_members:
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/YOUR_USERNAME/india-runs-redrob-ranker"  # UPDATE
+github_repo: "https://github.com/aaryan4747/india-runs-redrob-ranker"
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"  # UPDATE
+sandbox_link: "https://colab.research.google.com/github/aaryan4747/india-runs-redrob-ranker/blob/main/redrob_ranker_sandbox.ipynb"
 # OR use Google Colab: "https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID"
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
