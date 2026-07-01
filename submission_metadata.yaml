@@ -1,0 +1,81 @@
+# Redrob Hackathon — Submission Metadata
+# India Runs 2026 · Track 1: The Data & AI Challenge
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "AaryanK-Solo"
+
+primary_contact:
+  name: "Boyapati Aaryan Karthik"
+  email: "aaryankarthik@example.com"   # UPDATE with your real email
+  phone: "+91-XXXXXXXXXX"              # UPDATE with your real phone
+
+team_members:
+  - name: "Boyapati Aaryan Karthik"
+    email: "aaryankarthik@example.com"  # UPDATE with your real email
+    role: "Solo Participant — Full Stack AI Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/YOUR_USERNAME/india-runs-redrob-ranker"  # UPDATE
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"  # UPDATE
+# OR use Google Colab: "https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "MacBook"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11"
+  os: "macOS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+  - "GitHub Copilot"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion, code review, and debugging assistance.
+  Used GitHub Copilot for autocomplete during development.
+  No candidate data was fed to any LLM during ranking — the ranker is entirely
+  rule-based with custom scoring algorithms. All ranking logic runs locally
+  with zero API calls.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Multi-dimensional rule-based ranker with five scoring components:
+  Role-Fit (30%), Skill Match (25%), Career Quality (15%), Behavioral Signals (20%),
+  and Logistics (10%). Skill matching uses a curated taxonomy with alias resolution
+  and proficiency/duration weighting. Honeypot detection via 9 heuristic checks
+  for internally contradictory profiles. Anti-keyword-stuffing logic penalizes
+  beginner-proficiency bulk skill listings. Behavioral signals weight recruiter
+  response rate, platform recency, and GitHub activity heavily — per JD guidance
+  that availability matters as much as on-paper fit. Career scoring penalizes
+  pure-services backgrounds and rewards product-company ML experience.
+  Reasoning is generated per-candidate referencing specific profile facts.
+  Runtime: ~45 seconds for 100K candidates on CPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
