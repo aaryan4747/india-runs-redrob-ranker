@@ -117,10 +117,7 @@ def fill_template():
                                 r.font.name = 'Calibri'
                                 r.font.size = Pt(13) if idx > 0 else Pt(22)
                                 # Color styling
-                                if idx > 0:
-                                    r.font.color.rgb = RGBColor(240, 240, 240)
-                                else:
-                                    r.font.color.rgb = RGBColor(50, 50, 50)
+                                r.font.color.rgb = RGBColor(0, 0, 0)
                         
                         print(f"Replaced text on Slide {idx+1}")
                         break
@@ -142,7 +139,7 @@ def fill_template():
     p.font.name = 'Calibri'
     p.font.size = Pt(16)
     p.font.bold = True
-    p.font.color.rgb = RGBColor(240, 240, 240)
+    p.font.color.rgb = RGBColor(0, 0, 0)
     
     p2 = tf7.add_paragraph()
     p2.text = (
@@ -176,7 +173,7 @@ def fill_template():
     )
     p2.font.name = 'Courier New'
     p2.font.size = Pt(11)
-    p2.font.color.rgb = RGBColor(0, 230, 230) # Cyan colored architecture diagram
+    p2.font.color.rgb = RGBColor(0, 0, 0) # Black colored architecture diagram
     p2.space_before = Pt(14)
 
     # Save to the Downloads folder
